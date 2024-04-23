@@ -24,7 +24,7 @@ export default function Rotas() {
         }}
       >
         {/* em primeiro apenas para não precisar ficar navegando enquanto desenvolve */}
-        {/* <TabStack.Screen name="Home" component={Home} options={{ headerShown: false }} /> */}
+        <TabStack.Screen name="Home" component={Home} options={{ headerShown: false }} />
         <TabStack.Screen name="Index" component={Index} options={{ headerShown: false }} />
         <TabStack.Screen name="Login" component={Login} options={{ headerShown: false }} />
         <TabStack.Screen name="Cadastro" component={Cadastro} options={{ headerShown: false }} />

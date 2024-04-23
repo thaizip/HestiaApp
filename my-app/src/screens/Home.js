@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import { Colors } from '../../assets/colors/colors'
 import Banner from '../components/Home/Banner';
+import CardList from '../components/List/CardList';
 
 export default function Home() {
     return (
@@ -10,7 +11,14 @@ export default function Home() {
                 <Text style={styles.titulo}>Bem - Vindo</Text>
                 <Text>Nome do usuário </Text>
             </View>
-            <Banner/>
+            <Banner />
+            <View style={styles.containerCard}>
+                <Text style={styles.tituloCard}>Minhas Listas</Text>
+                <CardList />
+                <CardList />
+                <CardList />
+            </View>
+
         </View>
     );
 }
@@ -18,12 +26,23 @@ export default function Home() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: Colors.Branco,
+        backgroundColor: Colors.Fundo,
         padding: 30
     },
     titulo: {
         color: Colors.Preto,
         fontSize: 35,
         fontWeight: '700',
+    },
+    containerCard: {
+        backgroundColor: Colors.Branco,
+        borderRadius: 15
+    },
+    tituloCard: {
+        fontSize: 15,
+        fontWeight: '500',
+        paddingLeft: 15,
+        paddingTop: 15,
+        paddingBottom: 5
     }
 });
