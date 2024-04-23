@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Colors } from '../../../assets/colors/colors';
 import { Image, StyleSheet, Text, View, TouchableOpacity, TextInput, KeyboardAvoidingView } from 'react-native';
+import ImgLogin from '../../../assets/images/access/login';
 
 export default function Index({ navigation }) {
   const [termsAccepted, setTermsAccepted] = useState(false);
@@ -11,7 +12,7 @@ export default function Index({ navigation }) {
   return (
     <KeyboardAvoidingView style={styles.container} keyboardVerticalOffset={1000} >
       <View style={styles.inner}>
-        <Image source={require('../../../assets/images/access/index.png')} style={[styles.image, { alignSelf: 'center' }]} />
+        <ImgLogin />
         <Text style={[styles.text, { fontSize: 25, fontWeight: 'bold' }]}>BEM - VINDO ! </Text>
         <Text style={[styles.text, { fontWeight: 300 }]}>Faça login para continuar </Text>
         <TouchableOpacity style={styles.buttonGoogle} onPress={() => navigation.navigate('Cadastro')}>
@@ -114,12 +115,6 @@ const styles = StyleSheet.create({
     width: 20,
     height: 20,
     marginRight: 10,
-  },
-  image: {
-    width: 350,
-    height: 350,
-    resizeMode: 'contain',
-    alignItems: 'center',
   },
   dividerContainer: {
     flexDirection: 'row',

@@ -1,12 +1,16 @@
 import { Image, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { Colors } from '../../assets/colors/colors';
+import ImgIndex from '../../assets/images/access';
+import Logo from '../../assets/images/access/logo';
 
 export default function Index({ navigation }) {
     return (
         <View style={styles.container}>
             <View style={styles.inner}>
-                <Image source={require('../../assets/images/access/index.png')} style={[styles.image, { alignSelf: 'center' }]} />
-                <Image source={require('../../assets/images/logo.png')} style={{marginBottom: 15}} />
+                <ImgIndex/>
+                <Logo/>
+                {/* <Image source={require('../../assets/images/access/index.png')} style={[styles.image, { alignSelf: 'center' }]} />
+                <Image source={require('../../assets/images/logo.png')} style={{marginBottom: 15}} /> */}
                 <Text style={[styles.text, {marginBottom: 5}]}>Venha fazer parte da Economia Inteligente no Supermercado!</Text>
                 <View style={styles.buttonContainer}>
                     <TouchableOpacity style={styles.button}>
@@ -59,13 +63,6 @@ const styles = StyleSheet.create({
         borderWidth: 2,
         padding: 5,
         borderRadius: 10,
-
-    },
-    image: {
-        width: 400,
-        height: 600,
-        resizeMode: 'contain',
-        alignItems: 'center'
 
     },
 

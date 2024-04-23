@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import { Colors } from '../../../assets/colors/colors'
+import Imagem from '../../../assets/images/home/banner';
 export default function Banner() {
     return (
         <View style={styles.banner}>
@@ -9,7 +10,8 @@ export default function Banner() {
                 <Text style={styles.textBanner}>Crie sua lista e {'\n'}
                     vamos comparar ! </Text>
             </View>
-            <Image source={require('../../../assets/images/home/banner.png')} style={{ flex: 1 }} />
+            {/* <Image source={require('../../../assets/images/home/banner.png')} style={{ flex: 1 }} /> */}
+            <Imagem />
         </View>
     );
 }
