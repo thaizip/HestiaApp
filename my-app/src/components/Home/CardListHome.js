@@ -1,17 +1,20 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faListCheck } from '@fortawesome/free-solid-svg-icons'
 import { Colors } from '../../../assets/colors/colors';
+import BtnComparar from '../Buttons/BtnComparar';
 
-export default function CardList() {
+export default function CardListHome() {
     return (
         <View style={styles.container}>
             <View style={styles.inner}>
-                <FontAwesomeIcon icon={faListCheck} size={20}  />
-                <Text style={{color: Colors.Preto}}>Nome da lista</Text>
+                <FontAwesomeIcon icon={faListCheck} size={20} />
+                <TouchableOpacity>
+                    <Text style={{ color: Colors.Preto }}>Nome da lista</Text>
+                </TouchableOpacity>
             </View>
-            <Text>Button</Text>
+            <BtnComparar />
         </View>
     );
 }
@@ -24,7 +27,8 @@ const styles = StyleSheet.create({
         width: '100%',
         backgroundColor: Colors.Branco,
         borderRadius: 10,
-        padding: 15,
+        paddingVertical: 10,
+        paddingHorizontal: 20,
         color: Colors.Preto,
     },
     inner: {

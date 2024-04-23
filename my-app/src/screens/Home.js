@@ -1,8 +1,8 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import { Colors } from '../../assets/colors/colors'
 import Banner from '../components/Home/Banner';
-import CardList from '../components/List/CardList';
+import CardListHome from '../components/Home/CardListHome';
 
 export default function Home() {
     return (
@@ -14,9 +14,9 @@ export default function Home() {
             <Banner />
             <View style={styles.containerCard}>
                 <Text style={styles.tituloCard}>Minhas Listas</Text>
-                <CardList />
-                <CardList />
-                <CardList />
+                <CardListHome />
+                <CardListHome />
+                <CardListHome />
             </View>
 
         </View>
