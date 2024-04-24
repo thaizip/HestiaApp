@@ -3,23 +3,29 @@ import { StyleSheet, Text, View } from 'react-native';
 import { Colors } from '../../assets/colors/colors'
 import Banner from '../components/Home/Banner';
 import CardListHome from '../components/Home/CardListHome';
+import Fonts from '../../assets/fonts/fonts';
 
 export default function Home() {
     return (
-        <View style={styles.container}>
-            <View>
-                <Text style={styles.titulo}>Bem - Vindo</Text>
-                <Text>Nome do usuário </Text>
+        <Fonts font={
+            <View style={styles.container}>
+                <View>
+                    <Text style={styles.titulo}>Bem - Vindo</Text>
+                    <Text>Nome do usuário </Text>
+                </View>
+                <Banner />
+                <View style={styles.containerCard}>
+                    <Text style={styles.tituloCard}>Minhas Listas</Text>
+                    <CardListHome />
+                    <CardListHome />
+                    <CardListHome />
+                </View>
+                <View style={styles.containerMerc}>
+                    <Text style={{fontSize: 25, fontFamily: 'Montserrat_600SemiBold'}}>Mercados</Text>
+                </View>
+       
             </View>
-            <Banner />
-            <View style={styles.containerCard}>
-                <Text style={styles.tituloCard}>Minhas Listas</Text>
-                <CardListHome />
-                <CardListHome />
-                <CardListHome />
-            </View>
-
-        </View>
+        } />
     );
 }
 
@@ -27,12 +33,13 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: Colors.Fundo,
-        padding: 30
+        paddingVertical: 50,
+        paddingHorizontal: 25
     },
     titulo: {
         color: Colors.Preto,
         fontSize: 35,
-        fontWeight: '700',
+        fontFamily: 'Montserrat_600SemiBold'
     },
     containerCard: {
         backgroundColor: Colors.Branco,
@@ -40,9 +47,25 @@ const styles = StyleSheet.create({
     },
     tituloCard: {
         fontSize: 15,
-        fontWeight: '500',
+        fontFamily: 'Montserrat_600SemiBold',
         paddingLeft: 15,
         paddingTop: 15,
         paddingBottom: 5
+    },
+    containerMerc:{
+        alignItems: 'center',
+        paddingTop: 15
+    },
+    CardMerc:{
+        flexDirection: 'row',
+        
     }
 });
+
+
+
+
+
+
+
+

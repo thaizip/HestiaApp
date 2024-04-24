@@ -2,17 +2,21 @@ import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import { Colors } from '../../../assets/colors/colors'
 import Imagem from '../../../assets/images/home/banner';
+import Fonts from '../../../assets/fonts/fonts';
+
 export default function Banner() {
     return (
-        <View style={styles.banner}>
-            <View style={styles.inner}>
-                <Text style={styles.tituloBanner}>Bora Economizar ?</Text>
-                <Text style={styles.textBanner}>Crie sua lista e {'\n'}
-                    vamos comparar ! </Text>
+        <Fonts font={
+            <View style={styles.banner}>
+                <View style={styles.inner}>
+                    <Text style={styles.tituloBanner}>Bora Economizar ?</Text>
+                    <Text style={styles.textBanner}>Crie sua lista e {'\n'}
+                        vamos comparar ! </Text>
+                </View>
+                <Imagem />
             </View>
-            {/* <Image source={require('../../../assets/images/home/banner.png')} style={{ flex: 1 }} /> */}
-            <Imagem />
-        </View>
+        } />
+
     );
 }
 
@@ -27,17 +31,17 @@ const styles = StyleSheet.create({
 
     },
     inner: {
-        gap: 10
+        gap: 5
     },
     tituloBanner: {
         fontSize: 20,
-        fontWeight: '500',
+        fontFamily: 'Montserrat_600SemiBold',
         color: Colors.VerdeClaro,
 
     },
     textBanner: {
         fontSize: 15,
-        fontWeight: '200',
+        fontFamily: 'Montserrat_300Light',
         color: Colors.VerdeClaro,
 
     }

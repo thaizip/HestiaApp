@@ -4,18 +4,22 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faListCheck } from '@fortawesome/free-solid-svg-icons'
 import { Colors } from '../../../assets/colors/colors';
 import BtnComparar from '../Buttons/BtnComparar';
+import Fonts from '../../../assets/fonts/fonts';
 
 export default function CardListHome() {
     return (
-        <View style={styles.container}>
-            <View style={styles.inner}>
-                <FontAwesomeIcon icon={faListCheck} size={20} />
-                <TouchableOpacity>
-                    <Text style={{ color: Colors.Preto }}>Nome da lista</Text>
-                </TouchableOpacity>
+        <Fonts font={
+            <View style={styles.container}>
+                <View style={styles.inner}>
+                    <FontAwesomeIcon icon={faListCheck} size={20} />
+                    <TouchableOpacity>
+                        <Text style={{ color: Colors.Preto, fontFamily: 'Montserrat_500Medium'}}>Nome da lista</Text>
+                    </TouchableOpacity>
+                </View>
+                <BtnComparar />
             </View>
-            <BtnComparar />
-        </View>
+        } />
+
     );
 }
 
