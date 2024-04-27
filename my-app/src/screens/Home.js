@@ -1,14 +1,15 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { Colors } from '../../assets/colors/colors'
 import Banner from '../components/Home/Banner';
 import CardListHome from '../components/Home/CardListHome';
 import Fonts from '../../assets/fonts/fonts';
+import CardProduto from '../components/List/CardProduto';
 
 export default function Home() {
     return (
         <Fonts font={
-            <View style={styles.container}>
+            <ScrollView style={styles.container}>
                 <View>
                     <Text style={styles.titulo}>Bem - Vindo</Text>
                     <Text>Nome do usuário </Text>
@@ -23,8 +24,9 @@ export default function Home() {
                 <View style={styles.containerMerc}>
                     <Text style={{fontSize: 25, fontFamily: 'Montserrat_600SemiBold'}}>Mercados</Text>
                 </View>
-       
-            </View>
+                <CardProduto/>
+             
+            </ScrollView>
         } />
     );
 }

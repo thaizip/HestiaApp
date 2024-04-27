@@ -1,14 +1,14 @@
 import React from 'react';
 import { StyleSheet, TouchableOpacity, View } from 'react-native';
 import { Colors } from '../../../assets/colors/colors';
-import PigBank from '../../../assets/images/icons/pigBank';
+import { FontAwesome6} from '@expo/vector-icons'
 
-export default function BtnComparar() {
+export default function BtnAdd() {
     return (
 
         <View style={style.container}>
             <TouchableOpacity>
-                <PigBank />
+                <FontAwesome6 name='plus'size={12}/>
             </TouchableOpacity>
         </View>
     );
@@ -16,11 +16,13 @@ export default function BtnComparar() {
 
 const style = StyleSheet.create({
     container: {
-        padding: 5,
-        borderRadius: 10,
+        justifyContent: 'center',
+        paddingHorizontal: 5,
+        borderRadius: 5,
         borderWidth: 1.5,
         borderColor: Colors.VerdeEscuro,
         alignItems: 'center',
+        padding:5
     },
 
 });

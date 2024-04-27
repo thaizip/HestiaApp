@@ -1,7 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { faListCheck } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesome6} from '@expo/vector-icons'
 import { Colors } from '../../../assets/colors/colors';
 import BtnComparar from '../Buttons/BtnComparar';
 import Fonts from '../../../assets/fonts/fonts';
@@ -11,7 +10,8 @@ export default function CardListHome() {
         <Fonts font={
             <View style={styles.container}>
                 <View style={styles.inner}>
-                    <FontAwesomeIcon icon={faListCheck} size={20} />
+                <FontAwesome6 name='list-check'size={20}/>
+
                     <TouchableOpacity>
                         <Text style={{ color: Colors.Preto, fontFamily: 'Montserrat_500Medium'}}>Nome da lista</Text>
                     </TouchableOpacity>

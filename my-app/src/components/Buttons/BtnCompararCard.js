@@ -17,9 +17,12 @@ const style = StyleSheet.create({
     container: {
         flexDirection: 'row',
         backgroundColor: Colors.VerdeClaro,
-        padding: 8,
-        gap: 8,
-        borderRadius: 18
+        padding: 5,
+        gap: 2,
+        borderRadius: 18,
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: '72%'
     },
     text: {
         color: Colors.VerdeEscuro,
