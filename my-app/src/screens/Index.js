@@ -9,8 +9,6 @@ export default function Index({ navigation }) {
             <View style={styles.inner}>
                 <ImgIndex/>
                 <Logo/>
-                {/* <Image source={require('../../assets/images/access/index.png')} style={[styles.image, { alignSelf: 'center' }]} />
-                <Image source={require('../../assets/images/logo.png')} style={{marginBottom: 15}} /> */}
                 <Text style={[styles.text, {marginBottom: 5}]}>Venha fazer parte da Economia Inteligente no Supermercado!</Text>
                 <View style={styles.buttonContainer}>
                     <TouchableOpacity style={styles.button}>

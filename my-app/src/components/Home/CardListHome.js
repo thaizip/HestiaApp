@@ -26,13 +26,11 @@ export default function CardListHome() {
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
-        justifyContent: 'space-between',
         alignItems: 'center',
         width: '100%',
         backgroundColor: Colors.Branco,
         borderRadius: 10,
-        paddingVertical: 10,
-        paddingHorizontal: 20,
+        padding: 10,
         color: Colors.Preto,
     },
     inner: {

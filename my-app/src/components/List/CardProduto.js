@@ -5,7 +5,6 @@ import BtnAdd from "../Buttons/BtnAdd";
 
 export default function CardProduto() {
     return (
-        <View style={styles.container}>
             <View style={styles.containerCard}>
                 <View style={{ justifyContent: 'flex-start', alignItems: 'flex-end' }}>
                     <BtnAdd />
@@ -20,22 +19,20 @@ export default function CardProduto() {
                     <BtnCompararCard />
                 </View>
             </View>
-        </View>
     )
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flexDirection: 'row'
-    },
+
     containerCard: {
-        width: '48%',
+        width: '49%',
         backgroundColor: Colors.Branco,
         borderRadius: 15,
         padding: 15,
-        marginEnd: 10,
+        marginEnd: 8,
         marginBottom: 10,
-        marginVertical: 10
+        marginVertical: 10,
+        alignSelf: 'flex-start'
     },
     containerImg: {
         flexDirection: 'row',
