@@ -2,10 +2,10 @@ import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { FontAwesome6} from '@expo/vector-icons'
 import { Colors } from '../../../assets/colors/colors';
-import BtnComparar from '../Buttons/BtnComparar';
 import Fonts from '../../../assets/fonts/fonts';
+import BtnAdd from '../Buttons/BtnAdd';
 
-export default function CardListHome() {
+export default function CardList() {
     return (
         <Fonts font={
             <View style={styles.container}>
@@ -16,7 +16,7 @@ export default function CardListHome() {
                         <Text style={{ color: Colors.Preto, fontFamily: 'Montserrat_500Medium'}}>Nome da lista</Text>
                     </TouchableOpacity>
                 </View>
-                <BtnComparar />
+                <BtnAdd />
             </View>
         } />
 
@@ -26,20 +26,17 @@ export default function CardListHome() {
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
-        justifyContent: 'space-between',
         alignItems: 'center',
         width: '100%',
         backgroundColor: Colors.Branco,
         borderRadius: 10,
-        paddingVertical: 10,
-        paddingHorizontal: 20,
+        padding: 10,
         color: Colors.Preto,
     },
     inner: {
         flexDirection: 'row',
         alignItems: 'center',
-        gap: 15,
-     
+        gap: 15
     }
 
 });

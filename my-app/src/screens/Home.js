@@ -5,6 +5,7 @@ import Banner from '../components/Home/Banner';
 import CardListHome from '../components/Home/CardListHome';
 import Fonts from '../../assets/fonts/fonts';
 import CardProduto from '../components/List/CardProduto';
+import ModAdd from '../components/modais/ModAdd';
 
 export default function Home() {
     return (
@@ -24,8 +25,7 @@ export default function Home() {
                 <View style={styles.containerMerc}>
                     <Text style={{fontSize: 25, fontFamily: 'Montserrat_600SemiBold'}}>Mercados</Text>
                 </View>
-                <CardProduto/>
-             
+                <ModAdd/>             
             </ScrollView>
         } />
     );

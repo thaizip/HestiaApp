@@ -4,9 +4,9 @@ import { Colors } from '../../assets/colors/colors'
 
 import Fonts from '../../assets/fonts/fonts';
 import CardProduto from '../components/List/CardProduto';
-import Search from '../components/Seach';
+import Search from '../components/Search';
 
-export default function Home() {
+export default function Explorar() {
     return (
         <Fonts font={
             <ScrollView style={styles.container}>
