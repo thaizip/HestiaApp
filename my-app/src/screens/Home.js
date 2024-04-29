@@ -4,7 +4,6 @@ import { Colors } from '../../assets/colors/colors'
 import Banner from '../components/Home/Banner';
 import CardListHome from '../components/Home/CardListHome';
 import Fonts from '../../assets/fonts/fonts';
-import CardProduto from '../components/List/CardProduto';
 import ModAdd from '../components/modais/ModAdd';
 
 export default function Home() {

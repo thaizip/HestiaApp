@@ -11,6 +11,7 @@ import Login from './screens/access/Login';
 import Cadastro from './screens/access/Cadastro';
 import Home from './screens/Home';
 import Explorar from './screens/Explorar'
+import Vizualizar from './screens/list/Vizualizar';
 
 export default function Rotas() {
 
@@ -25,6 +26,7 @@ export default function Rotas() {
         }}
       >
         {/* em primeiro apenas para não precisar ficar navegando enquanto desenvolve */}
+        <TabStack.Screen name="Vizualizar" component={Vizualizar} options={{ headerShown: false }} />
         <TabStack.Screen name="Explorar" component={Explorar} options={{ headerShown: false }} />
         <TabStack.Screen name="Home" component={Home} options={{ headerShown: false }} />
         <TabStack.Screen name="Index" component={Index} options={{ headerShown: false }} />

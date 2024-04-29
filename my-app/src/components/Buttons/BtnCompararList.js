@@ -3,7 +3,7 @@ import { StyleSheet, TouchableOpacity, View } from 'react-native';
 import { Colors } from '../../../assets/colors/colors';
 import PigBank from '../../../assets/images/icons/pigBank';
 
-export default function BtnComparar() {
+export default function BtnCompararList() {
     return (
 
         <View style={[styles.container, styles]}>
@@ -16,11 +16,11 @@ export default function BtnComparar() {
 
 const styles = StyleSheet.create({
     container: {
-        padding: 5,
-        borderRadius: 10,
-        borderWidth: 1.5,
-        borderColor: Colors.VerdeEscuro,
+        padding: 8,
+        borderRadius: 15,
+        backgroundColor: Colors.VerdeClaro,
         alignItems: 'center',
+        justifyContent: 'center'
     },
 
 });

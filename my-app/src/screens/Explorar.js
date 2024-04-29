@@ -46,7 +46,8 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: Colors.Fundo,
         paddingVertical: 50,
-        paddingHorizontal: 25
+        paddingHorizontal: 25,
+        marginVertical: 15
     },
     titulo: {
         color: Colors.Preto,

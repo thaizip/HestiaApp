@@ -1,24 +1,25 @@
 import { View, Text, StyleSheet, Image } from "react-native";
-import BtnCompararCard from "../Buttons/BtnCompararCard";
 import { Colors } from "../../../assets/colors/colors";
-import BtnAdd from "../Buttons/BtnAdd";
+import BtnQuant from '../Buttons/BtnQuant'
+import BtnCompararList from "../Buttons/BtnCompararList";
 
 export default function CardProduto() {
     return (
-            <View style={styles.containerCard}>
-                <View style={{ justifyContent: 'flex-start', alignItems: 'flex-end' }}>
-                    <BtnAdd />
-                </View>
-                <View style={styles.containerImg}>
-                    <Image source={require('../../../assets/images/product/imgBatata.png')} />
-                </View>
-                <View style={styles.containerInner}>
-                    <Text style={styles.titulo}>Batata Inglesa</Text>
-                    <Text style={styles.descricao}>Versátil e nutritiva. Usada para fazer purê, ou fritas.</Text>
-                    <Text style={styles.peso}>100g</Text>
-                    <BtnCompararCard />
-                </View>
+        <View style={styles.containerCard}>
+            <View style={styles.containerImg}>
+                <Image source={require('../../../assets/images/product/imgBatata.png')} />
             </View>
+            <View style={styles.containerInner}>
+                <Text style={styles.titulo}>Batata Inglesa</Text>
+                <Text style={styles.descricao}>Versátil e nutritiva. Usada para fazer purê, ou fritas.</Text>
+                <Text style={styles.peso}>100g</Text>
+                <View style={styles.buttons}>
+                    <BtnQuant />
+                    <BtnCompararList/>
+                </View>
+
+            </View>
+        </View>
     )
 }
 
@@ -33,7 +34,7 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         marginVertical: 10,
         alignSelf: 'flex-start',
-        elevation: 1, 
+        elevation: 1,
 
     },
     containerImg: {
@@ -55,6 +56,13 @@ const styles = StyleSheet.create({
     peso: {
         fontSize: 12,
         fontFamily: 'Montserrat_300Light'
-    }
+    },
+    buttons: {
+        paddingTop: 8,
+        flexDirection: 'row',
+        gap: 10
+    },
+
+
 
 })
