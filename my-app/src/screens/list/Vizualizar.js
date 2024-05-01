@@ -1,24 +1,25 @@
 import React from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { Colors } from '../../../assets/colors/colors'
+import {  Ionicons} from '@expo/vector-icons';
 import Fonts from '../../../assets/fonts/fonts';
-import CardProdutoList from '../../components/List/CardProdutoList';
+import CardProdutoVizList from '../../components/List/CardProdutoVizList';
 import CardAddItem from '../../components/List/CardAddItem';
-import {  Feather, Ionicons} from '@expo/vector-icons';
+
 
 export default function Vizualizar() {
     return (
         <Fonts font={
-            <ScrollView style={styles.container}>
-                <Text style={styles.titulo}>Churrasco Dia dos Pais</Text>
+            <ScrollView style={style.container}>
+                <Text style={style.titulo}>Churrasco Dia dos Pais</Text>
                 <View style={{flexDirection: 'row', gap: 5}}>
                     <Ionicons name='bag-outline' size={20} />
-                    <Text style={styles.subtitulo}>12 itens  </Text>
+                    <Text style={style.subtitulo}>12 itens  </Text>
                 </View>
-                <View style={styles.containerCard}>
-                    <View style={styles.Card}>
-                        <CardProdutoList />
-                        <CardProdutoList />
+                <View style={style.containerCard}>
+                    <View style={style.Card}>
+                        <CardProdutoVizList />
+                        <CardProdutoVizList />
                     </View>
                     <CardAddItem />
                 </View>
@@ -28,7 +29,7 @@ export default function Vizualizar() {
     );
 }
 
-const styles = StyleSheet.create({
+const style = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: Colors.Fundo,

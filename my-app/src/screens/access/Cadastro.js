@@ -9,56 +9,56 @@ export default function Index({ navigation }) {
     setTermsAccepted(!termsAccepted);
   };
   return (
-    <KeyboardAvoidingView style={styles.container} keyboardVerticalOffset={1000} >
-      <View style={styles.inner}>
-        <Text style={[styles.text, { fontSize: 25, fontWeight: 'bold' }]}>CRIE SUA CONTA !</Text>
-        <Text style={[styles.text, { fontWeight: 300 }]}>Crie e compare </Text>
-        <TouchableOpacity style={styles.buttonGoogle} onPress={() => navigation.navigate('Cadastro')}>
-          <Image source={require('../../../assets/images/access/logoGoogle.png')} style={styles.googleLogo} />
-          <Text style={styles.text}>Entre com o Google</Text>
+    <KeyboardAvoidingView style={style.container} keyboardVerticalOffset={1000} >
+      <View style={style.inner}>
+        <Text style={[style.text, { fontSize: 25, fontWeight: 'bold' }]}>CRIE SUA CONTA !</Text>
+        <Text style={[style.text, { fontWeight: 300 }]}>Crie e compare </Text>
+        <TouchableOpacity style={style.buttonGoogle} onPress={() => navigation.navigate('Cadastro')}>
+          <Image source={require('../../../assets/images/access/logoGoogle.png')} style={style.googleLogo} />
+          <Text style={style.text}>Entre com o Google</Text>
         </TouchableOpacity>
 
-        <View style={styles.dividerContainer}>
-          <View style={styles.divider} />
-          <Text style={[styles.text, { marginHorizontal: 10, fontSize: 10 }]}>OU</Text>
-          <View style={styles.divider} />
+        <View style={style.dividerContainer}>
+          <View style={style.divider} />
+          <Text style={[style.text, { marginHorizontal: 10, fontSize: 10 }]}>OU</Text>
+          <View style={style.divider} />
         </View>
         {/* inputs */}
         <View> 
-          <Text style={styles.text}>NOME</Text>
+          <Text style={style.text}>NOME</Text>
           <TextInput
-            style={styles.input}
+            style={style.input}
             keyboardType="default"
             autoCapitalize="none"
           />
-           <Text style={styles.text}>E-MAIL</Text>
+           <Text style={style.text}>E-MAIL</Text>
           <TextInput
-            style={styles.input}
+            style={style.input}
             keyboardType="email-address"
             autoCapitalize="none"
           />
-          <Text style={styles.text}>SENHA</Text>
+          <Text style={style.text}>SENHA</Text>
           <TextInput
-            style={styles.input}
+            style={style.input}
             secureTextEntry={true}
           />
-          <Text style={styles.text}>CONFIRMAR SENHA</Text>
+          <Text style={style.text}>CONFIRMAR SENHA</Text>
           <TextInput
-            style={styles.input}
+            style={style.input}
             secureTextEntry={true}
           />
         </View>
         {/* links */}
-        <View style={styles.checkboxContainer}>
-          <TouchableOpacity style={[styles.checkbox, termsAccepted && styles.checkboxSelected]} onPress={handleTermsToggle}>
-            {termsAccepted && <View style={styles.checkboxInner} />}
+        <View style={style.checkboxContainer}>
+          <TouchableOpacity style={[style.checkbox, termsAccepted && style.checkboxSelected]} onPress={handleTermsToggle}>
+            {termsAccepted && <View style={style.checkboxInner} />}
           </TouchableOpacity>
-          <Text style={[styles.text, { fontSize: 11, }]}>CONCORDO COM A POLÍTICA DE PRIVACIDADE</Text>
+          <Text style={[style.text, { fontSize: 11, }]}>CONCORDO COM A POLÍTICA DE PRIVACIDADE</Text>
         </View>
         
-        <View style={styles.buttonContainer}>
-          <TouchableOpacity style={styles.button}>
-            <Text style={[styles.text, { color: '#254B2A', fontWeight: 500 }]}>CADASTRAR</Text>
+        <View style={style.buttonContainer}>
+          <TouchableOpacity style={style.button}>
+            <Text style={[style.text, { color: '#254B2A', fontWeight: 500 }]}>CADASTRAR</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -66,7 +66,7 @@ export default function Index({ navigation }) {
   );
 }
 
-const styles = StyleSheet.create({
+const style = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: Colors.VerdeEscuro,

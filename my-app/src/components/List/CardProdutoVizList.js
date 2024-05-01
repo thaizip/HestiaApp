@@ -1,21 +1,21 @@
 import { View, Text, StyleSheet, Image } from "react-native";
 import { Colors } from "../../../assets/colors/colors";
 import BtnQuant from '../Buttons/BtnQuant'
-import BtnCompararList from "../Buttons/BtnCompararList";
+import BtnCompararVizList from "../Buttons/BtnCompararVizList";
 
-export default function CardProduto() {
+export default function CardProdutoVizList() {
     return (
-        <View style={styles.containerCard}>
-            <View style={styles.containerImg}>
+        <View style={style.containerCard}>
+            <View style={style.containerImg}>
                 <Image source={require('../../../assets/images/product/imgBatata.png')} />
             </View>
-            <View style={styles.containerInner}>
-                <Text style={styles.titulo}>Batata Inglesa</Text>
-                <Text style={styles.descricao}>Versátil e nutritiva. Usada para fazer purê, ou fritas.</Text>
-                <Text style={styles.peso}>100g</Text>
-                <View style={styles.buttons}>
+            <View style={style.containerInner}>
+                <Text style={style.titulo}>Batata Inglesa</Text>
+                <Text style={style.descricao}>Versátil e nutritiva. Usada para fazer purê, ou fritas.</Text>
+                <Text style={style.peso}>100g</Text>
+                <View style={style.buttons}>
                     <BtnQuant />
-                    <BtnCompararList/>
+                    <BtnCompararVizList/>
                 </View>
 
             </View>
@@ -23,7 +23,7 @@ export default function CardProduto() {
     )
 }
 
-const styles = StyleSheet.create({
+const style = StyleSheet.create({
 
     containerCard: {
         width: '49%',

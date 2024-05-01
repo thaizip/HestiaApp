@@ -9,20 +9,20 @@ import BtnNewList from '../Buttons/BtnNewList';
 import CardProdSelect from '../List/CardProdSelect';
 
 
-export default function ModAdd() {
+export default function ModCompararItem() {
 
     return (
         <ScrollView style={style.container}>
             <View>
                 <View style={style.head}>
-                    <Text style={style.titulo}>Adicionar</Text>
+                    <Text style={style.titulo}>Comparar</Text>
                     <TouchableOpacity>
                         <BtnFechar />
                     </TouchableOpacity>
                 </View>
                 <View style={{ flexDirection: 'row', gap: 5 }}>
                     <Ionicons name="bag-check-outline" size={20} />
-                    <Text style={style.subtitulo}>Em qual lista deseja salvar?  </Text>
+                    <Text style={style.subtitulo}>Qual preço é melhor para você ?</Text>
                 </View>
             </View>
             <Search />
@@ -58,7 +58,8 @@ const style = StyleSheet.create({
     subtitulo: {
         fontSize: 15,
         color: Colors.Preto,
-        fontFamily: 'Montserrat_400Regular'
+        fontFamily: 'Montserrat_400Regular',
+        marginBottom: 1
     },
     containerList: {
         gap: 12,

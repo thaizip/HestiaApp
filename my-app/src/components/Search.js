@@ -5,25 +5,24 @@ import { Colors } from '../../assets/colors/colors';
 
 export default function Search() {
     return (
-        <View style={styles.container}>
-            <Feather name="search" size={20} style={styles.icon} />
+        <View style={style.container}>
+            <Feather name="search" size={20} style={style.icon} />
             <TextInput
-                style={styles.input}
+                style={style.input}
                 autoCapitalize="none"
             />
         </View>
     );
 }
 
-const styles = StyleSheet.create({
+const style = StyleSheet.create({
     container: {
         flexDirection: 'row',
         alignItems: 'center',
-        borderRadius: 5,
+        borderRadius: 15,
         width: '100%',
         backgroundColor: Colors.Branco,
         height: 45,
-        marginVertical: 15,
         paddingHorizontal: 10,
     },
     icon: {

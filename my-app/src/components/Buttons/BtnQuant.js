@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, Touchable, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Colors } from '../../../assets/colors/colors';
-import PigBank from '../../../assets/images/icons/pigBank';
-import { TouchableOpacity } from 'react-native-gesture-handler';
 import { AntDesign } from '@expo/vector-icons';
 
 export default function BtnQuant() {
-    const [quant, setQuant] = useState(0)
+    const [quant, setQuant] = useState(1)
 
     const AddQuant = () => {
         setQuant(quant + 1)
@@ -41,6 +39,7 @@ const style = StyleSheet.create({
         borderRadius: 18,
         alignItems: 'center',
         justifyContent: 'center',
+        elevation: 1
     },
 
     text: {

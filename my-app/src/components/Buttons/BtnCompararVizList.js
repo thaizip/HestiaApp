@@ -3,10 +3,10 @@ import { StyleSheet, TouchableOpacity, View } from 'react-native';
 import { Colors } from '../../../assets/colors/colors';
 import PigBank from '../../../assets/images/icons/pigBank';
 
-export default function BtnCompararList() {
+export default function BtnComparaVizList() {
     return (
 
-        <View style={[styles.container, styles]}>
+        <View style={[style.container]}>
             <TouchableOpacity>
                 <PigBank />
             </TouchableOpacity>
@@ -14,7 +14,7 @@ export default function BtnCompararList() {
     );
 }
 
-const styles = StyleSheet.create({
+const style = StyleSheet.create({
     container: {
         padding: 8,
         borderRadius: 15,

@@ -1,36 +1,31 @@
 import React from 'react';
-import { ScrollView, StyleSheet, Text, TouchableOpacity, View, } from 'react-native';
+import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Colors } from '../../../assets/colors/colors'
-import { Ionicons } from '@expo/vector-icons';
-import Search from '../Search';
+import { Ionicons} from '@expo/vector-icons';
 import BtnFechar from '../Buttons/BtnFechar'
-import CardList from '../List/CardList';
-import BtnNewList from '../Buttons/BtnNewList';
-import CardProdSelect from '../List/CardProdSelect';
+import BtnCancelar from '../Buttons/BtnCancelar'
+import BtnSalvar from '../Buttons/BtnSalvar'
 
-
-export default function ModAdd() {
+export default function ModExcluir() {
 
     return (
         <ScrollView style={style.container}>
             <View>
                 <View style={style.head}>
-                    <Text style={style.titulo}>Adicionar</Text>
+                    <Text style={style.titulo}>Excluir Lista</Text>
                     <TouchableOpacity>
                         <BtnFechar />
                     </TouchableOpacity>
                 </View>
-                <View style={{ flexDirection: 'row', gap: 5 }}>
-                    <Ionicons name="bag-check-outline" size={20} />
-                    <Text style={style.subtitulo}>Em qual lista deseja salvar?  </Text>
+                <View style={{ flexDirection: 'row', gap: 5, alignItems: 'center', paddingEnd: 35}}>
+                    <Ionicons name="bag-remove-outline" size={25} />
+                    <Text style={style.subtitulo}>Tem certeza que deseja excluir a lista 'nome da lista' ? </Text>
                 </View>
-            </View>
-            <Search />
-            <BtnNewList />
-            <View style={style.containerList}>
-                <CardProdSelect />
-                <CardList />
-                <CardList />
+                <View style={style.buttons}>
+                    <BtnCancelar />
+                    <BtnSalvar />
+                </View>
+
             </View>
         </ScrollView>
     );
@@ -40,7 +35,7 @@ const style = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: Colors.Fundo,
-        borderTopLeftRadius: 20, 
+        borderTopLeftRadius: 20,
         borderTopRightRadius: 20,
         padding: 15
     },
@@ -56,15 +51,19 @@ const style = StyleSheet.create({
     },
 
     subtitulo: {
-        fontSize: 15,
+        fontSize: 18,
         color: Colors.Preto,
         fontFamily: 'Montserrat_400Regular'
     },
-    containerList: {
-        gap: 12,
+    buttons: {
+        flexDirection: 'row',
+        justifyContent: 'flex-end',
+        gap: 10,
+        marginVertical: 20,
     }
 
 });
+
 
 
 

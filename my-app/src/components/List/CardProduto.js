@@ -5,24 +5,24 @@ import BtnAdd from "../Buttons/BtnAdd";
 
 export default function CardProduto() {
     return (
-            <View style={styles.containerCard}>
+            <View style={style.containerCard}>
                 <View style={{ justifyContent: 'flex-start', alignItems: 'flex-end' }}>
                     <BtnAdd />
                 </View>
-                <View style={styles.containerImg}>
+                <View style={style.containerImg}>
                     <Image source={require('../../../assets/images/product/imgBatata.png')} />
                 </View>
-                <View style={styles.containerInner}>
-                    <Text style={styles.titulo}>Batata Inglesa</Text>
-                    <Text style={styles.descricao}>Versátil e nutritiva. Usada para fazer purê, ou fritas.</Text>
-                    <Text style={styles.peso}>100g</Text>
+                <View style={style.containerInner}>
+                    <Text style={style.titulo}>Batata Inglesa</Text>
+                    <Text style={style.descricao}>Versátil e nutritiva. Usada para fazer purê, ou fritas.</Text>
+                    <Text style={style.peso}>100g</Text>
                     <BtnCompararCard />
                 </View>
             </View>
     )
 }
 
-const styles = StyleSheet.create({
+const style = StyleSheet.create({
 
     containerCard: {
         width: '49%',

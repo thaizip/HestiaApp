@@ -10,49 +10,49 @@ export default function Index({ navigation }) {
     setTermsAccepted(!termsAccepted);
   };
   return (
-    <KeyboardAvoidingView style={styles.container} keyboardVerticalOffset={1000} >
-      <View style={styles.inner}>
+    <KeyboardAvoidingView style={style.container} keyboardVerticalOffset={1000} >
+      <View style={style.inner}>
         <ImgLogin />
-        <Text style={[styles.text, { fontSize: 25, fontWeight: 'bold' }]}>BEM - VINDO ! </Text>
-        <Text style={[styles.text, { fontWeight: 300 }]}>Faça login para continuar </Text>
-        <TouchableOpacity style={styles.buttonGoogle} onPress={() => navigation.navigate('Cadastro')}>
-          <Image source={require('../../../assets/images/access/logoGoogle.png')} style={styles.googleLogo} />
-          <Text style={styles.text}>Entre com o Google</Text>
+        <Text style={[style.text, { fontSize: 25, fontWeight: 'bold' }]}>BEM - VINDO ! </Text>
+        <Text style={[style.text, { fontWeight: 300 }]}>Faça login para continuar </Text>
+        <TouchableOpacity style={style.buttonGoogle} onPress={() => navigation.navigate('Cadastro')}>
+          <Image source={require('../../../assets/images/access/logoGoogle.png')} style={style.googleLogo} />
+          <Text style={style.text}>Entre com o Google</Text>
         </TouchableOpacity>
 
-        <View style={styles.dividerContainer}>
-          <View style={styles.divider} />
-          <Text style={[styles.text, { marginHorizontal: 10, fontSize: 10 }]}>OU</Text>
-          <View style={styles.divider} />
+        <View style={style.dividerContainer}>
+          <View style={style.divider} />
+          <Text style={[style.text, { marginHorizontal: 10, fontSize: 10 }]}>OU</Text>
+          <View style={style.divider} />
         </View>
         {/* inputs */}
         <View> 
-          <Text style={styles.text}>E-MAIL</Text>
+          <Text style={style.text}>E-MAIL</Text>
           <TextInput
-            style={styles.input}
+            style={style.input}
             keyboardType="email-address"
             autoCapitalize="none"
           />
-          <Text style={styles.text}>SENHA</Text>
+          <Text style={style.text}>SENHA</Text>
           <TextInput
-            style={styles.input}
+            style={style.input}
             secureTextEntry={true}
           />
         </View>
         {/* links */}
-        <View style={styles.checkboxContainer}>
-          <TouchableOpacity style={[styles.checkbox, termsAccepted && styles.checkboxSelected]} onPress={handleTermsToggle}>
-            {termsAccepted && <View style={styles.checkboxInner} />}
+        <View style={style.checkboxContainer}>
+          <TouchableOpacity style={[style.checkbox, termsAccepted && style.checkboxSelected]} onPress={handleTermsToggle}>
+            {termsAccepted && <View style={style.checkboxInner} />}
           </TouchableOpacity>
-          <Text style={[styles.text, { fontSize: 11, }]}>LEMBRE DE MIM</Text>
+          <Text style={[style.text, { fontSize: 11, }]}>LEMBRE DE MIM</Text>
           <TouchableOpacity style={{marginLeft: 'auto' }}>
-            <Text style={[styles.text, { fontSize: 11 }]}>ESQUECEU A SENHA?</Text> 
+            <Text style={[style.text, { fontSize: 11 }]}>ESQUECEU A SENHA?</Text> 
           </TouchableOpacity>
         </View>
         
-        <View style={styles.buttonContainer}>
-          <TouchableOpacity style={styles.button}>
-            <Text style={[styles.text, { color: '#254B2A', fontWeight: 600 }]}  onPress={() => navigation.navigate('Home')}>ENTRAR</Text>
+        <View style={style.buttonContainer}>
+          <TouchableOpacity style={style.button}>
+            <Text style={[style.text, { color: '#254B2A', fontWeight: 600 }]}  onPress={() => navigation.navigate('Home')}>ENTRAR</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -60,7 +60,7 @@ export default function Index({ navigation }) {
   );
 }
 
-const styles = StyleSheet.create({
+const style = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: Colors.VerdeEscuro,

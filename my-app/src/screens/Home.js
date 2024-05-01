@@ -4,33 +4,31 @@ import { Colors } from '../../assets/colors/colors'
 import Banner from '../components/Home/Banner';
 import CardListHome from '../components/Home/CardListHome';
 import Fonts from '../../assets/fonts/fonts';
-import ModAdd from '../components/modais/ModAdd';
 
 export default function Home() {
     return (
         <Fonts font={
-            <ScrollView style={styles.container}>
+            <ScrollView style={style.container}>
                 <View>
-                    <Text style={styles.titulo}>Bem - Vindo</Text>
+                    <Text style={style.titulo}>Bem - Vindo</Text>
                     <Text>Nome do usuário </Text>
                 </View>
                 <Banner />
-                <View style={styles.containerCard}>
-                    <Text style={styles.tituloCard}>Minhas Listas</Text>
+                <View style={style.containerCard}>
+                    <Text style={style.tituloCard}>Minhas Listas</Text>
                     <CardListHome />
                     <CardListHome />
                     <CardListHome />
                 </View>
-                <View style={styles.containerMerc}>
+                <View style={style.containerMerc}>
                     <Text style={{fontSize: 25, fontFamily: 'Montserrat_600SemiBold'}}>Mercados</Text>
                 </View>
-                <ModAdd/>             
             </ScrollView>
         } />
     );
 }
 
-const styles = StyleSheet.create({
+const style = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: Colors.Fundo,

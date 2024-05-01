@@ -9,25 +9,25 @@ import Search from '../components/Search';
 export default function Explorar() {
     return (
         <Fonts font={
-            <ScrollView style={styles.container}>
+            <ScrollView style={style.container}>
                 <View>
-                    <Text style={styles.titulo}>Explorar</Text>
-                    <Text style={styles.subtitulo}>Com o que deseja economizar hoje?  </Text>
+                    <Text style={style.titulo}>Explorar</Text>
+                    <Text style={style.subtitulo}>Com o que deseja economizar hoje?  </Text>
                     <Search/>
                     <Text>Categorias</Text>
                 </View>
-                <View style={styles.containerCard}>
-                    <View style={styles.Card}>
+                <View style={style.containerCard}>
+                    <View style={style.Card}>
                         <CardProduto />
                         <CardProduto />
 
                     </View>
-                    <View style={styles.Card}>
+                    <View style={style.Card}>
                         <CardProduto />
                         <CardProduto />
 
                     </View>
-                    <View style={styles.Card}>
+                    <View style={style.Card}>
                         <CardProduto />
                         <CardProduto />
 
@@ -41,7 +41,7 @@ export default function Explorar() {
     );
 }
 
-const styles = StyleSheet.create({
+const style = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: Colors.Fundo,

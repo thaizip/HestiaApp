@@ -6,7 +6,7 @@ import PigBank from '../../../assets/images/icons/pigBank';
 export default function BtnComparar() {
     return (
 
-        <View style={[styles.container, styles]}>
+        <View style={[style.container]}>
             <TouchableOpacity>
                 <PigBank />
             </TouchableOpacity>
@@ -14,7 +14,7 @@ export default function BtnComparar() {
     );
 }
 
-const styles = StyleSheet.create({
+const style = StyleSheet.create({
     container: {
         padding: 5,
         borderRadius: 10,

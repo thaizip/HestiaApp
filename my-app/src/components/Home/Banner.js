@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import { Colors } from '../../../assets/colors/colors'
 import Imagem from '../../../assets/images/home/banner';
 import Fonts from '../../../assets/fonts/fonts';
@@ -7,10 +7,10 @@ import Fonts from '../../../assets/fonts/fonts';
 export default function Banner() {
     return (
         <Fonts font={
-            <View style={styles.banner}>
-                <View style={styles.inner}>
-                    <Text style={styles.tituloBanner}>Bora Economizar ?</Text>
-                    <Text style={styles.textBanner}>Crie sua lista e {'\n'}
+            <View style={style.banner}>
+                <View style={style.inner}>
+                    <Text style={style.tituloBanner}>Bora Economizar ?</Text>
+                    <Text style={style.textBanner}>Crie sua lista e {'\n'}
                         vamos comparar ! </Text>
                 </View>
                 <Imagem />
@@ -20,7 +20,7 @@ export default function Banner() {
     );
 }
 
-const styles = StyleSheet.create({
+const style = StyleSheet.create({
     banner: {
         flexDirection: 'row',
         backgroundColor: Colors.VerdeEscuro,

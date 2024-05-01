@@ -8,8 +8,8 @@ import Fonts from '../../../assets/fonts/fonts';
 export default function CardListHome() {
     return (
         <Fonts font={
-            <View style={styles.container}>
-                <View style={styles.inner}>
+            <View style={style.container}>
+                <View style={style.inner}>
                 <FontAwesome6 name='list-check'size={20}/>
 
                     <TouchableOpacity>
@@ -23,7 +23,7 @@ export default function CardListHome() {
     );
 }
 
-const styles = StyleSheet.create({
+const style = StyleSheet.create({
     container: {
         flexDirection: 'row',
         justifyContent: 'space-between',

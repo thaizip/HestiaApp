@@ -1,21 +1,21 @@
-import { Image, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { Colors } from '../../assets/colors/colors';
 import ImgIndex from '../../assets/images/access';
 import Logo from '../../assets/images/access/logo';
 
 export default function Index({ navigation }) {
     return (
-        <View style={styles.container}>
-            <View style={styles.inner}>
+        <View style={style.container}>
+            <View style={style.inner}>
                 <ImgIndex/>
                 <Logo/>
-                <Text style={[styles.text, {marginBottom: 5}]}>Venha fazer parte da Economia Inteligente no Supermercado!</Text>
-                <View style={styles.buttonContainer}>
-                    <TouchableOpacity style={styles.button}>
-                        <Text style={[styles.text, { color: '#254B2A', fontWeight: 500 }]} onPress={() => navigation.navigate('Login')}>LOGIN</Text>
+                <Text style={[style.text, {marginBottom: 5}]}>Venha fazer parte da Economia Inteligente no Supermercado!</Text>
+                <View style={style.buttonContainer}>
+                    <TouchableOpacity style={style.button}>
+                        <Text style={[style.text, { color: '#254B2A', fontWeight: 500 }]} onPress={() => navigation.navigate('Login')}>LOGIN</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonCadastro} onPress={() => navigation.navigate('Cadastro')}>
-                        <Text style={styles.text}>CADASTRAR</Text>
+                    <TouchableOpacity style={style.buttonCadastro} onPress={() => navigation.navigate('Cadastro')}>
+                        <Text style={style.text}>CADASTRAR</Text>
                     </TouchableOpacity>
                 </View>
             </View>
@@ -23,7 +23,7 @@ export default function Index({ navigation }) {
     );
 }
 
-const styles = StyleSheet.create({
+const style = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: Colors.VerdeEscuro,
