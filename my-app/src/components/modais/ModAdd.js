@@ -39,7 +39,7 @@ export default function ModAdd() {
 const style = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: Colors.Fundo,
+        // backgroundColor: Colors.Fundo,
         borderTopLeftRadius: 20, 
         borderTopRightRadius: 20,
         padding: 15
@@ -65,11 +65,3 @@ const style = StyleSheet.create({
     }
 
 });
-
-
-
-
-
-
-
-
