@@ -1,6 +1,10 @@
 import React, { useState, useRef } from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, Animated, Easing } from 'react-native';
 import { Colors } from "../../../assets/colors/colors";
+import { AntDesign,  } from '@expo/vector-icons';
+import { Ionicons } from '@expo/vector-icons';
+import PigBank2 from '../../../assets/images/icons/pigBank2';
+
 
 export default function CardListas() {
     const [expanded, setExpanded] = useState(false);
@@ -9,7 +13,7 @@ export default function CardListas() {
     const toggleExpand = () => {
         Animated.timing(slideAnim, {
             toValue: expanded ? 0 : -80,
-            duration: 250,
+            duration: 150,
             easing: Easing.linear,
             useNativeDriver: true,
         }).start(() => setExpanded(!expanded));
@@ -58,19 +62,21 @@ export default function CardListas() {
             </Animated.View>
             {expanded && (
                 <View style={styles.optionsContainer}>
-                    <View style={{padding: 8}}>
-                        <TouchableOpacity style={styles.optionButton}>
-                            <Text>Icon</Text>
+                    <View style={styles.buttons}>
+                        <TouchableOpacity style={styles.button}>
+                            <PigBank2 />
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.optionButton}>
-                            <Text>Icon</Text>
+                        <View style={styles.divider} />
+                        <TouchableOpacity style={styles.button}>
+                            <AntDesign name="sharealt" size={30} color={Colors.VerdeClaro} />
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.optionButton}>
-                            <Text>ICon</Text>
+                        <View style={styles.divider} />
+                        <TouchableOpacity style={styles.buttonTrash}>
+                            <Ionicons name="trash-outline" size={33} color={Colors.VerdeClaro} />
                         </TouchableOpacity>
                     </View>
-
                 </View>
+
             )}
         </View>
     );
@@ -114,7 +120,7 @@ const styles = StyleSheet.create({
         padding: 10,
         backgroundColor: '#EEEE',
         overflow: 'hidden',
-        alignItems: 'center', // Centraliza a imagem horizontalmente
+        alignItems: 'center',
     },
     column: {
         width: '30%',
@@ -127,12 +133,12 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         backgroundColor: '#EEE',
         overflow: 'hidden',
-        alignItems: 'center', // Centraliza a imagem horizontalmente
+        alignItems: 'center',
     },
     image: {
         width: '100%',
         height: '100%',
-        resizeMode: 'contain', // Redimensiona a imagem para caber completamente sem cortar
+        resizeMode: 'contain',
     },
     optionsContainer: {
         position: 'absolute',
@@ -144,14 +150,27 @@ const styles = StyleSheet.create({
         backgroundColor: Colors.VerdeEscuro,
         borderTopRightRadius: 10,
         borderBottomRightRadius: 10,
-        width: 80, // Ajuste a largura conforme necessário
+        width: 87,
+        paddingLeft: 5,
+        paddingVertical: 30
+        
     },
-    optionButton: {
-        padding: 10,
-        backgroundColor: 'white',
-        marginBottom: 10,
-        borderRadius: 5,
+    button: {
+        justifyContent: 'center',
         alignItems: 'center',
+        flex: 1,
+        borderBottomWidth: 0.70,
+        borderBottomColor: Colors.VerdeClaro
+        
     },
+    buttonTrash:{
+        justifyContent: 'center',
+        alignItems: 'center',
+        flex: 1,
+        paddingTop: 2
+    }
+
+
+
 });
 

@@ -19,7 +19,7 @@ const style = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         gap: 10,
-        marginBottom: 15
+        marginVertical: 15
     },
     text:{
         fontSize: 15,

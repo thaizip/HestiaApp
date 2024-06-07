@@ -3,9 +3,9 @@ import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { Colors } from '../../assets/colors/colors'
 
 import Fonts from '../../assets/fonts/fonts';
-import CardProduto from '../components/List/CardProduto';
 import Search from '../components/Search';
 import CardListas from '../components/List/CardListas';
+import BtnNewList from '../components/Buttons/BtnNewList';
 
 export default function Listas() {
     return (
@@ -15,13 +15,13 @@ export default function Listas() {
                     <Text style={style.titulo}>Listas</Text>
                     <Text style={style.subtitulo}>Com o que deseja economizar hoje?  </Text>
                     <Search />
-                    <Text>Categorias</Text>
+                    <BtnNewList />
                 </View>
                 <View style={style.containerCard}>
-                    <CardListas/>
-                    <CardListas/>
+                    <CardListas />
+                    <CardListas />
+                    <View style={style.divider} />
                 </View>
-
             </ScrollView>
         } />
     );
@@ -42,7 +42,8 @@ const style = StyleSheet.create({
     },
     subtitulo: {
         fontSize: 17,
-        fontFamily: 'Montserrat_400Regular'
+        fontFamily: 'Montserrat_400Regular',
+        paddingBottom: 10
     },
     containerCard: {
         marginBottom: 70,
