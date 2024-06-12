@@ -1,26 +1,25 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { View, Text, StyleSheet, Modal, TouchableOpacity } from 'react-native';
 import { Colors } from '../../../assets/colors/colors';
-import { AntDesign } from '@expo/vector-icons';
+import { Ionicons } from '@expo/vector-icons';
 
-import ModNewList from '../Modais/ModNewList';
+import ModExcluir from '../Modais/ModExcluir';
 
-export default function BtnNewList() {
+export default function BtnExcluir() {
     const [vizibleModal, setVisibleModal] = useState(false);
     return (
         <View >
             <TouchableOpacity style={style.container} onPress={() => setVisibleModal(true)}>
-                <AntDesign name='pluscircle' size={20} color={Colors.VerdeEscuro} />
-                <Text style={style.text}>Nova Lista</Text>
+                <Ionicons name="trash-outline" size={32} color={Colors.VerdeClaro} />
             </TouchableOpacity>
 
-            <Modal 
+            <Modal
                 visible={vizibleModal}
                 transparent={true}
                 onRequestClose={() => setVisibleModal(false)}
                 animationType='slide'
-            > 
-                <ModNewList
+            >
+                <ModExcluir
                     handleClose={() => setVisibleModal(false)}
                 />
             </Modal>
@@ -35,12 +34,8 @@ const style = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         gap: 10,
-        marginVertical: 15
     },
-    text: {
-        fontSize: 15,
-        fontFamily: 'Montserrat_600SemiBold'
-    }
+   
 })
 
 

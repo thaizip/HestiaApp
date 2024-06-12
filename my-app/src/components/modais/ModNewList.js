@@ -10,14 +10,16 @@ import CardProdOp from '../List/CardProdOp';
 
 
 
-export default function ModNewList() {
+export default function ModNewList({ handleClose }) {
 
     return (
-        <ScrollView style={style.container}>
-            <View>
+
+        <View style={style.container}>
+            <TouchableOpacity style={{ flex: 1, zIndex: 9, backgroundColor: 'rgba(0, 0, 0, 0.2)' }} onPress={handleClose}></TouchableOpacity>
+            <View style={style.content}>
                 <View style={style.head}>
                     <Text style={style.titulo}>Nova Lista</Text>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={handleClose}>
                         <BtnFechar />
                     </TouchableOpacity>
                 </View>
@@ -43,25 +45,29 @@ export default function ModNewList() {
                         <CardProdOp />
                     </View>
                     <View style={style.buttons}>
-                        <BtnCancelar />
+                        <TouchableOpacity onPress={handleClose}>
+                            <BtnCancelar />
+                        </TouchableOpacity>
                         <BtnSalvar />
                     </View>
 
                 </View>
-
-
             </View>
-        </ScrollView>
+
+        </View>
     );
 }
 
 const style = StyleSheet.create({
     container: {
         flex: 1,
+    },
+    content: {
         backgroundColor: Colors.Fundo,
-        borderTopLeftRadius: 20, 
-        borderTopRightRadius: 20,
-        padding: 15
+        paddingBottom: 10,
+        paddingHorizontal: 25,
+        paddingTop: 20,
+        borderRadius: 10
     },
     head: {
         flexDirection: 'row',
@@ -71,13 +77,14 @@ const style = StyleSheet.create({
     titulo: {
         color: Colors.Preto,
         fontSize: 25,
-        fontFamily: 'Montserrat_600SemiBold'
+        fontFamily: 'Montserrat_600SemiBold',
+        paddingBottom: 5
     },
 
     subtitulo: {
         fontSize: 15,
         color: Colors.Preto,
-        fontFamily: 'Montserrat_400Regular'
+        fontFamily: 'Montserrat_400Regular',
     },
     inner: {
         marginVertical: 10,
@@ -103,7 +110,7 @@ const style = StyleSheet.create({
     buttons: {
         flexDirection: 'row',
         justifyContent: 'flex-end',
-        gap: 10, 
+        gap: 10,
         marginVertical: 20,
     }
 

@@ -6,7 +6,7 @@ import { Ionicons } from '@expo/vector-icons';
 export default function BtnFechar() {
     return (
         <View >
-            <Ionicons name="close-circle-outline" size={30} color={Colors.Preto}/> 
+            <Ionicons name="close-circle-outline" size={35} color={Colors.Preto}/> 
         </View>
 
     );

@@ -4,6 +4,8 @@ import { Colors } from "../../../assets/colors/colors";
 import { AntDesign,  } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 import PigBank2 from '../../../assets/images/icons/pigBank2';
+import BtnNewList from '../Buttons/BtnNewList';
+import BtnExcluir from '../Buttons/BtnExclui';
 
 
 export default function CardListas() {
@@ -71,9 +73,9 @@ export default function CardListas() {
                             <AntDesign name="sharealt" size={30} color={Colors.VerdeClaro} />
                         </TouchableOpacity>
                         <View style={styles.divider} />
-                        <TouchableOpacity style={styles.buttonTrash}>
-                            <Ionicons name="trash-outline" size={33} color={Colors.VerdeClaro} />
-                        </TouchableOpacity>
+                        <View style={styles.buttonTrash}>
+                            <BtnExcluir/>
+                        </View>
                     </View>
                 </View>
 

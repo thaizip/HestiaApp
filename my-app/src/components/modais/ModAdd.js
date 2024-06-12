@@ -9,40 +9,51 @@ import BtnNewList from '../Buttons/BtnNewList';
 import CardProdSelect from '../List/CardProdSelect';
 
 
-export default function ModAdd() {
+export default function ModAdd({ handleClose }) {
 
     return (
-        <ScrollView style={style.container}>
-            <View>
-                <View style={style.head}>
-                    <Text style={style.titulo}>Adicionar</Text>
-                    <TouchableOpacity>
-                        <BtnFechar />
-                    </TouchableOpacity>
-                </View>
-                <View style={{ flexDirection: 'row', gap: 5 }}>
-                    <Ionicons name="bag-check-outline" size={20} />
-                    <Text style={style.subtitulo}>Em qual lista deseja salvar?  </Text>
+        
+
+            <View style={style.container}>
+                <TouchableOpacity style={{ flex: 1, zIndex: 9, backgroundColor: 'rgba(0, 0, 0, 0.2)' }} onPress={handleClose}></TouchableOpacity>
+                <View style={style.content}>
+                    <View>
+                        <View style={style.head}>
+                            <Text style={style.titulo}>Adicionar</Text>
+                            <TouchableOpacity onPress={handleClose}>
+                                <BtnFechar />
+                            </TouchableOpacity>
+                        </View>
+                        <View style={{ flexDirection: 'row', gap: 5 }}>
+                            <Ionicons name="bag-check-outline" size={20} />
+                            <Text style={style.subtitulo}>Em qual lista deseja salvar?  </Text>
+                        </View>
+                    </View>
+                    <Search />
+                    <BtnNewList />
+                    <View style={style.containerList}>
+                        <CardProdSelect />
+                        <CardList />
+                        <CardList />
+                    </View>
                 </View>
             </View>
-            <Search />
-            <BtnNewList />
-            <View style={style.containerList}>
-                <CardProdSelect />
-                <CardList />
-                <CardList />
-            </View>
-        </ScrollView>
+       
+
     );
 }
 
 const style = StyleSheet.create({
     container: {
         flex: 1,
-        // backgroundColor: Colors.Fundo,
-        borderTopLeftRadius: 20, 
-        borderTopRightRadius: 20,
-        padding: 15
+    
+    },
+    content: {
+        backgroundColor: Colors.Fundo,
+        paddingBottom: 10,
+        paddingHorizontal: 25,
+        paddingTop: 20,
+        borderRadius: 10
     },
     head: {
         flexDirection: 'row',
@@ -62,6 +73,7 @@ const style = StyleSheet.create({
     },
     containerList: {
         gap: 12,
+        zIndex: 9
     }
 
 });
