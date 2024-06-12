@@ -1,13 +1,29 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, Text, View, Modal, TouchableOpacity } from 'react-native';
 import { Colors } from '../../../assets/colors/colors';
 import PigBank from '../../../assets/images/icons/pigBank';
+import ModCompararItem from '../../components/Modais/ModCompararItem'
 
 export default function BtnCompararCard() {
+    const [vizibleModal, setVisibleModal] = useState(false);
+
     return (
-        <View style={style.container}>
-            <PigBank />
-            <Text style={style.text}>Comparar</Text>
+        <View >
+            <TouchableOpacity style={style.container} onPress={() => setVisibleModal(true)}>
+                <PigBank />
+                <Text style={style.text}>Comparar</Text>
+            </TouchableOpacity>
+
+            <Modal
+                visible={vizibleModal}
+                transparent={true}
+                onRequestClose={() => setVisibleModal(false)}
+                animationType='slide'
+            >
+                <ModCompararItem
+                    handleClose={() => setVisibleModal(false)}
+                />
+            </Modal>
         </View>
 
     );

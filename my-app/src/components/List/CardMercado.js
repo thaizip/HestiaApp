@@ -1,15 +1,18 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import { Colors } from '../../../assets/colors/colors';
+import Mortari from '../../../assets/images/home/mercados/mortari'
 
 export default function CardMercado() {
     return (
         <View style={style.container}>
-            <View style={style.inner}>
-                <Text>Img Mercado</Text>
+
+            <TouchableOpacity style={style.inner}>
+                <Mortari />
                 <Text style={style.titulo}>Supermercado Mortari</Text>
                 <Text style={style.subtitulo}>R$ 0,80</Text>
-            </View>
+            </TouchableOpacity>
+
         </View>
 
     );
@@ -40,7 +43,8 @@ const style = StyleSheet.create({
     subtitulo: {
         color: Colors.Preto,
         fontFamily: 'Montserrat_600SemiBold'
-    }
+    },
+
 
 
 });

@@ -3,39 +3,25 @@ import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { Colors } from '../../assets/colors/colors'
 
 import Fonts from '../../assets/fonts/fonts';
-import CardProduto from '../components/List/CardProduto';
 import Search from '../components/Search';
+import CardListas from '../components/List/CardListas';
+import BtnNewList from '../components/Buttons/BtnNewList';
 
-export default function Explorar() {
+export default function Listas() {
     return (
         <Fonts font={
             <ScrollView style={style.container}>
                 <View>
-                    <Text style={style.titulo}>Explorar</Text>
+                    <Text style={style.titulo}>Listas</Text>
                     <Text style={style.subtitulo}>Com o que deseja economizar hoje?  </Text>
-                    <Search/>
-                    <Text>Categorias</Text>
+                    <Search />
+                    <BtnNewList />
                 </View>
                 <View style={style.containerCard}>
-                    <View style={style.Card}>
-                        <CardProduto />
-                        <CardProduto />
-
-                    </View>
-                    <View style={style.Card}>
-                        <CardProduto />
-                        <CardProduto />
-
-                    </View>
-                    <View style={style.Card}>
-                        <CardProduto />
-                        <CardProduto />
-
-                    </View>
+                    <CardListas />
+                    <CardListas />
+                    <View style={style.divider} />
                 </View>
-
-
-
             </ScrollView>
         } />
     );
@@ -56,9 +42,10 @@ const style = StyleSheet.create({
     },
     subtitulo: {
         fontSize: 17,
-        fontFamily: 'Montserrat_400Regular'
+        fontFamily: 'Montserrat_400Regular',
+        paddingBottom: 10
     },
-    containerCard:{
+    containerCard: {
         marginBottom: 70,
     },
     Card: {
