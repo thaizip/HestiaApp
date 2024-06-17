@@ -13,7 +13,7 @@ import Home from './screens/Home';
 import Explorar from './screens/Explorar'
 import Vizualizar from './screens/list/Vizualizar';
 import Listas from './screens/Listas'
-import teste from './screens/teste'
+import Teste from './screens/teste'
 
 export default function Rotas() {
 
@@ -28,6 +28,7 @@ export default function Rotas() {
         }}
       >
         {/* em primeiro apenas para não precisar ficar navegando enquanto desenvolve */}
+        <TabStack.Screen name="Teste" component={Teste} options={{ headerShown: false }} />
         <TabStack.Screen name="Listas" component={Listas} options={{ headerShown: false }} />
         <TabStack.Screen name="Home" component={Home} options={{ headerShown: false }} />
         <TabStack.Screen name="Index" component={Index} options={{ headerShown: false }} />

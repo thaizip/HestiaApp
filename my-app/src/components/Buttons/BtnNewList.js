@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Modal, TouchableOpacity } from 'react-native';
 import { Colors } from '../../../assets/colors/colors';
 import { AntDesign } from '@expo/vector-icons';
 
-import ModNewList from '../Modais/ModNewList';
+import ModNewList from '../modais/ModNewList'
 
 export default function BtnNewList() {
     const [vizibleModal, setVisibleModal] = useState(false);

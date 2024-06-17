@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { StyleSheet, TouchableOpacity, View, Modal } from 'react-native';
 import { Colors } from '../../../assets/colors/colors';
 import PigBank from '../../../assets/images/icons/pigBank';
-import ModCompararItem from '../../components/Modais/ModCompararItem'
+import ModCompararItem from '../modais/ModCompararItem'
 
 
 export default function BtnComparaVizList() {

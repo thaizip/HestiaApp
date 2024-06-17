@@ -9,7 +9,7 @@ export default function BtnAdd() {
 
     const openModal = async () => {
         if (!ModAddComponent) {
-            const { default: ModAdd } = await import('../Modais/ModAdd');
+            const { default: ModAdd } = await import('../modais/ModAdd');
             setModAddComponent(() => ModAdd);
         }
         setVisibleModal(true);

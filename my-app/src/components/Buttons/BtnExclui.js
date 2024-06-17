@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Modal, TouchableOpacity } from 'react-native';
 import { Colors } from '../../../assets/colors/colors';
 import { Ionicons } from '@expo/vector-icons';
 
-import ModExcluir from '../Modais/ModExcluir';
+import ModExcluir from '../modais/ModExcluir';
 
 export default function BtnExcluir() {
     const [vizibleModal, setVisibleModal] = useState(false);

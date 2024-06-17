@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Modal } from "react-native";
 import { Colors } from "../../../assets/colors/colors";
 import { AntDesign } from '@expo/vector-icons'
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import ModAddItem from '../Modais/ModAddItem'
+import ModAddItem from '../modais/ModAddItem'
 
 export default function CardAddItem() {
     const [vizibleModal, setVisibleModal] = useState(false);
