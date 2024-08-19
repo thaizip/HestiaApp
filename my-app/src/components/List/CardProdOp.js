@@ -1,20 +1,30 @@
-import React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import { Colors } from '../../../assets/colors/colors';
 import BtnQuant from '../Buttons/BtnQuant';
 import BtnAddCirc from '../Buttons/BtnAddCirc';
+import { imagePaths } from '../../../assets/images/imagesPaths';
 
-export default function CardProdOp() {
+export default function CardProdOp({ data, onAddProduct }) {
+    const getImageSource = (imgUrl) => {
+        return imagePaths[imgUrl] || require('../../../assets/images/imgPadrao.png');
+    };
+    const handleAddProduct = () => {
+        onAddProduct(data);
+    };
+
     return (
         <View style={style.container}>
             <View style={style.inner}>
-                <Image source={require('../../../assets/images/product/imgBatata.png')} />
-                <View style={{gap: 5}}>
-                    <Text style={style.titulo}>Batata Inglesa</Text>
+            <Image source={getImageSource(data.imgUrl)} style={style.image} />
+                <View style={{ gap: 5 }}>
+                    <Text style={style.titulo}>{data.name}</Text>
                     <Text style={style.subtitulo}>100g</Text>
                     <View style={{ flexDirection: 'row', gap: 5 }}>
                         <BtnQuant />
-                        <BtnAddCirc />
+                        <TouchableOpacity onPress={handleAddProduct}>
+                            <BtnAddCirc />
+                        </TouchableOpacity>
                     </View>
                 </View>
 
@@ -46,8 +56,12 @@ const style = StyleSheet.create({
     subtitulo: {
         color: Colors.Preto,
         fontFamily: 'Montserrat_400Regular'
+    },
+
+    image: {
+        width: "100%",
+        justifyContent: 'flex-start',
+        resizeMode: 'contain' 
     }
-
-
 });
 

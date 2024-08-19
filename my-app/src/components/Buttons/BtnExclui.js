@@ -5,7 +5,8 @@ import { Ionicons } from '@expo/vector-icons';
 
 import ModExcluir from '../modais/ModExcluir';
 
-export default function BtnExcluir() {
+export default function BtnExcluir({listaId}) {
+    
     const [vizibleModal, setVisibleModal] = useState(false);
     return (
         <View >
@@ -21,6 +22,7 @@ export default function BtnExcluir() {
             >
                 <ModExcluir
                     handleClose={() => setVisibleModal(false)}
+                    listaId={listaId}
                 />
             </Modal>
         </View>

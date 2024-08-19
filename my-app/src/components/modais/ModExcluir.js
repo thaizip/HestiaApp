@@ -5,9 +5,28 @@ import { Ionicons } from '@expo/vector-icons';
 import BtnFechar from '../Buttons/BtnFechar'
 import BtnCancelar from '../Buttons/BtnCancelar'
 import BtnSalvar from '../Buttons/BtnSalvar'
+import apiStore from '../../service/apiStore';
 
-export default function ModExcluir({ handleClose }) {
+export default function ModExcluir({ handleClose, listaId }) {
 
+    const deletelista = async (listaId) => {
+        try {
+            const response = await apiStore.delete('/lista/' + listaId)
+            console.log(response.data)
+            return response.data
+        } catch (error) {
+            throw error
+        }
+    }
+
+    const ExcluirLista = async () => {
+        try {
+            await deletelista(listaId)
+            handleClose()
+        } catch (error) {
+            console.log('Error ao excluir lista', error)
+        }
+    }
     return (
         <View style={style.container}>
             <TouchableOpacity style={{ flex: 1, zIndex: 9, backgroundColor: 'rgba(0, 0, 0, 0.2)' }} onPress={handleClose}></TouchableOpacity>
@@ -26,7 +45,10 @@ export default function ModExcluir({ handleClose }) {
                     <TouchableOpacity onPress={handleClose}>
                         <BtnCancelar />
                     </TouchableOpacity>
-                    <BtnSalvar />
+                    <TouchableOpacity onPress={ExcluirLista}>
+                        <BtnSalvar />
+                    </TouchableOpacity>
+
                 </View>
 
             </View>

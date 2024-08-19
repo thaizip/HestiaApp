@@ -1,12 +1,15 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, Modal, TouchableOpacity } from 'react-native';
 import { Colors } from '../../../assets/colors/colors';
 import { AntDesign } from '@expo/vector-icons';
 
 import ModNewList from '../modais/ModNewList'
 
+
 export default function BtnNewList() {
+
     const [vizibleModal, setVisibleModal] = useState(false);
+    
     return (
         <View >
             <TouchableOpacity style={style.container} onPress={() => setVisibleModal(true)}>
@@ -14,14 +17,15 @@ export default function BtnNewList() {
                 <Text style={style.text}>Nova Lista</Text>
             </TouchableOpacity>
 
-            <Modal 
+            <Modal
                 visible={vizibleModal}
                 transparent={true}
                 onRequestClose={() => setVisibleModal(false)}
                 animationType='slide'
-            > 
+            >
                 <ModNewList
                     handleClose={() => setVisibleModal(false)}
+    
                 />
             </Modal>
         </View>

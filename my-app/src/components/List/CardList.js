@@ -4,14 +4,14 @@ import { FontAwesome6 } from '@expo/vector-icons'
 import { Colors } from '../../../assets/colors/colors';
 import BtnAdd from '../Buttons/BtnAdd';
 
-export default function CardList() {
+export default function CardList({data}) {
     return (
 
         <View style={style.container}>
             <View style={style.inner}>
                 <FontAwesome6 name='list-check' size={20} />
                 <TouchableOpacity>
-                    <Text style={{ color: Colors.Preto, fontFamily: 'Montserrat_500Medium' }}>Nome da lista</Text>
+                    <Text style={{ color: Colors.Preto, fontFamily: 'Montserrat_500Medium' }}>{data.name}</Text>
                 </TouchableOpacity>
             </View>
             <BtnAdd />

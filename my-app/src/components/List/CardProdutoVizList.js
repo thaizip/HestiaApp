@@ -3,15 +3,15 @@ import { Colors } from "../../../assets/colors/colors";
 import BtnQuant from '../Buttons/BtnQuant'
 import BtnCompararVizList from "../Buttons/BtnCompararVizList";
 
-export default function CardProdutoVizList() {
+export default function CardProdutoVizList({data}) {
     return (
         <View style={style.containerCard}>
             <View style={style.containerImg}>
                 <Image source={require('../../../assets/images/product/imgBatata.png')} />
             </View>
             <View style={style.containerInner}>
-                <Text style={style.titulo}>Batata Inglesa</Text>
-                <Text style={style.descricao}>Versátil e nutritiva. Usada para fazer purê, ou fritas.</Text>
+                <Text style={style.titulo}>{data.name}</Text>
+                <Text style={style.descricao}>{data.description}</Text>
                 <Text style={style.peso}>100g</Text>
                 <View style={style.buttons}>
                     <BtnQuant />

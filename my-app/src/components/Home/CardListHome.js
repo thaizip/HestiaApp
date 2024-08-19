@@ -5,7 +5,7 @@ import { Colors } from '../../../assets/colors/colors';
 import BtnComparar from '../Buttons/BtnComparar';
 import Fonts from '../../../assets/fonts/fonts';
 
-export default function CardListHome() {
+export default function CardListHome({data}) {
     return (
         <Fonts font={
             <View style={style.container}>
@@ -13,7 +13,7 @@ export default function CardListHome() {
                 <FontAwesome6 name='list-check'size={20}/>
 
                     <TouchableOpacity>
-                        <Text style={{ color: Colors.Preto, fontFamily: 'Montserrat_500Medium'}}>Nome da lista</Text>
+                        <Text style={{ color: Colors.Preto, fontFamily: 'Montserrat_500Medium'}}>{data.name}</Text>
                     </TouchableOpacity>
                 </View>
                 <BtnComparar />

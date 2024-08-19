@@ -11,7 +11,7 @@ import Svg, {
 } from "react-native-svg";
 const Mortari = (props) => (
     <Svg
-        width={70}
+        width={80}
         height={50}
         viewBox="0 0 70 49"
         fill="none"
